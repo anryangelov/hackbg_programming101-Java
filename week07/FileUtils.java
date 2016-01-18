@@ -1,3 +1,5 @@
+//Write comments :)
+
 package week07;
 
 import java.io.BufferedReader;
