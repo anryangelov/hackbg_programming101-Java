@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 public class ProperiesParser {
-	
+	/*
+	@author: Angel Angelov
+	*/	
 	// private List<String> lines;
 	private Map<String, String> data;
 	private String file;
