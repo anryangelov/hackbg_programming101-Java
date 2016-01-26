@@ -48,9 +48,9 @@ public class FileUtils {
 	public String readFrom(File file) throws IOException {
 		String res = "";
 		BufferedReader reader = null;
+		try {
 		reader = new BufferedReader(new FileReader(file));
 		String line;
-		try {
 			while (true) {
 				line = reader.readLine();
 				if (line == null) {
