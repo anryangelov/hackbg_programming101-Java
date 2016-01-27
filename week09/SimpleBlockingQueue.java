@@ -15,9 +15,9 @@ public class SimpleBlockingQueue<E> {
 	
 	public synchronized void add(E element) {
 		queue.add(element);
-		threadMessage("adding " + element);
+		MyUtil.threadMessage("adding " + element);
 		if (queue.size() == 1) {
-			threadMessage("notify");
+			MyUtil.threadMessage("notify");
 			notifyAll();
 		}
 		
@@ -26,21 +26,13 @@ public class SimpleBlockingQueue<E> {
 	public synchronized E poll() {
 		while (queue.size() == 0) {
 			try {
-				threadMessage("in wait");
+				MyUtil.threadMessage("in wait");
 				wait();
 			} catch (InterruptedException e) {}
 		}
 		E res = queue.remove(0);
-		threadMessage("getting element " + res);
+		MyUtil.threadMessage("getting element " + res);
 		return res;
-	}
-	
-	static void threadMessage(String message) {
-        String threadName =
-            Thread.currentThread().getName();
-        System.out.format("%s: %s%n",
-                          threadName,
-                          message);
 	}
 	
 	public static void main(String[] args) {
