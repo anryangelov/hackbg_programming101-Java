@@ -73,6 +73,8 @@ public class MaxSizeBlockinQueue<E> {
 				queue.add(9);
 				queue.add(10);
 				queue.add(11);
+				queue.add(12);
+				queue.add(13);
 			}
 		});
 		
