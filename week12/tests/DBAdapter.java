@@ -11,7 +11,7 @@ public class DBAdapter {
 	static final String DB_URL = "jdbc:mysql://localhost/test";
 
 	static final String USER = "root";
-	static final String PASS = "1162AN1162aa";
+	static final String PASS = "";
 
 	private Connection conn = null;
 	
